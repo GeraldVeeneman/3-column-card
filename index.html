@@ -11,6 +11,11 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css" integrity="sha512-uZEpdg8O5w6a2kJ9VKX6MJPr5MIj+R85f7706fR5D+dlr91P0sWQq3mBL/O/cQ8MfAOavO7VjUoJCH55BNsLDw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
 
     <title>Frontend Mentor | 3-column preview card component</title>
 
@@ -27,8 +32,8 @@
   </head>
   <body>
     <section class="flex-container">
-      <article class="card">
-        <p class="card-icon"></p>
+      <article class="card" id="sedans">
+        <p class="card-icon"><img src="/images/icon-sedans.svg" alt="Suvs"/></p>
         <h2 class="card-title">Sedans</h2>
         <p class="card-text">
           Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
@@ -37,8 +42,8 @@
       </article>
       <!-- /card-one -->
 
-      <article class="card">
-        <p class="card-icon"></p>
+      <article class="card" id="suvs">
+        <p class="card-icon"><img src="/images/icon-suvs.svg" alt="Suvs"/></p>
         <h2 class="card-title">SUVs</h2>
         <p class="card-text">
           Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.
@@ -47,8 +52,8 @@
       </article>
       <!-- /card-two -->
 
-      <article class="card">
-        <p class="card-icon"></p>
+      <article class="card" id="luxury">
+        <p class="card-icon"><img src="/images/icon-luxury.svg" alt="Luxury"/></p>
         <h2 class="card-title">Luxury</h2>
         <p class="card-text">
           Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.
@@ -57,14 +62,5 @@
       </article>
       <!-- /card-three -->
     </section>
-
-         
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Gerald Veeneman</a>.
-    </div>
   </body>
 </html>

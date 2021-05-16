@@ -1,0 +1,134 @@
+
+
+/* Colours */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--very-light-gray);
+    font-size: 15px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Cards */
+
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    width: 200px;
+    height: 370px;
+    padding: 30px;  
+}
+
+.card-icon {
+    width: 170px;
+    margin-top:10px;
+}
+
+.card-title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;    
+    text-transform:uppercase;
+    color: var(--very-light-gray);
+    margin: 10px 0 5px 0;
+}
+.card-text {
+    color:var(--transparent-white);
+    margin: 0px 0 5px 0;
+}
+.card-text, a.card-button {font-family:'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+/* Buttons */
+a.card-button {
+    display: block;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 25px;
+    background-color: var(--very-light-gray);
+    /*margin-top: auto;*/
+    align-self: flex-end;
+}
+
+#sedans {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#suvs {
+    background-color: var(--dark-cyan);
+}
+#luxury {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#sedans a.card-button {
+    color: var(--bright-orange);
+}
+
+#suvs a.card-button {
+    color: var(--dark-cyan);
+}
+
+#luxury a.card-button {
+    color: var(--very-dark-cyan);
+}
+
+/* Hover states buttons */ 
+#sedans a.card-button:hover, #suvs a.card-button:hover, #luxury a.card-button:hover {
+    color: var(--very-light-gray);
+    border-color: var(--very-light-gray);
+    transition: 0.3s;
+}
+
+#sedans a.card-button:hover {
+    background-color: var(--bright-orange);
+}
+
+#suvs a.card-button:hover {
+    background-color: var(--dark-cyan);
+}
+
+#luxury a.card-button:hover {
+    background-color: var(--very-dark-cyan);
+}
+
+
+
+/* Responsive layout - makes an one column layout instead of a three-column layout (in order to prevent horizontal scrolling) */
+@media screen and (max-width: 780px) {
+  .flex-container {
+    flex-flow: column wrap;
+    height:inherit;
+    justify-content: center;
+    align-content: center;
+  }
+  #sedans {
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  #luxury {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 10px;
+  }
+}
