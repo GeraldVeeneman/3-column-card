@@ -15,27 +15,26 @@ body {
 }
 
 .flex-container {
-    display: flex;
-    flex-flow: row wrap;
+    width: 80%;
+    min-height: 100vh;
     justify-content: center;
     align-content: center;
-    height: 100vh;
-    width: 100vw;
+    margin:auto;
 }
+
+.flex-container, .card {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
 
 /* Cards */
 
 .card {
-    display: flex;
-    flex-flow: row wrap;
-    width: 200px;
-    height: 370px;
-    padding: 30px;  
-}
-
-.card-icon {
-    width: 170px;
-    margin-top:10px;
+    flex:1;
+    flex-direction: column;
+    padding: 2rem;
 }
 
 .card-title {
@@ -43,11 +42,11 @@ body {
     font-weight: 700;    
     text-transform:uppercase;
     color: var(--very-light-gray);
-    margin: 10px 0 5px 0;
 }
 .card-text {
+    flex: 1;
     color:var(--transparent-white);
-    margin: 0px 0 5px 0;
+    margin: 0px 0 2rem 0;
 }
 .card-text, a.card-button {font-family:'Lexend Deca', sans-serif;
     font-weight: 400;
@@ -63,8 +62,7 @@ a.card-button {
     border: 2px solid var(--very-light-gray);
     border-radius: 25px;
     background-color: var(--very-light-gray);
-    /*margin-top: auto;*/
-    align-self: flex-end;
+    margin-top: auto;
 }
 
 #sedans {
@@ -115,7 +113,7 @@ a.card-button {
 
 
 /* Responsive layout - makes an one column layout instead of a three-column layout (in order to prevent horizontal scrolling) */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 705px) {
   .flex-container {
     flex-flow: column wrap;
     height:inherit;
