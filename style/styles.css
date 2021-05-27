@@ -9,6 +9,12 @@
     --very-light-gray: hsl(0, 0%, 95%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--very-light-gray);
     font-size: 15px;
