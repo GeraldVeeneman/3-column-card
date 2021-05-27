@@ -74,16 +74,12 @@ a.card-button {
 
 #sedans {
     background-color: var(--bright-orange);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 #suvs {
     background-color: var(--dark-cyan);
 }
 #luxury {
     background-color: var(--very-dark-cyan);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 #sedans a.card-button {
@@ -135,7 +131,7 @@ a.card-button {
 
 @media screen and (min-width: 535px) and (max-width: 802px) {
   #sedans {
-      border-radius: 10px 0 0 0px;
+      border-radius: 10px 0px 0px 0px;
   }
   #suvs {
       border-radius: 0px 10px 0px 0px;
@@ -143,4 +139,20 @@ a.card-button {
   #luxury {
       border-radius: 0px 0px 10px 10px;
   }
+}
+
+@media screen and (min-width: 803px) {
+  #sedans {
+      border-radius: 10px 0px 0px 10px;
+  }
+  #suvs {
+      border-radius: 0px;
+  }
+  #luxury {
+      border-radius: 0px 10px 10px 0px;
+  }
+}
+
+.all-border-radius#sedans, .all-border-radius#suvs, .all-border-radius#luxury {
+    border-radius: 10px;
 }
