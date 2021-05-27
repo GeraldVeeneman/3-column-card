@@ -48,6 +48,7 @@ body {
     font-weight: 700;    
     text-transform:uppercase;
     color: var(--very-light-gray);
+    margin: 1em 0;
 }
 .card-text {
     flex: 1;
@@ -62,7 +63,7 @@ body {
 a.card-button {
     display: block;
     text-align: center;
-    width: 100px;
+    width: 150px;
     text-decoration: none;
     padding: 10px;
     border: 2px solid var(--very-light-gray);
@@ -118,21 +119,28 @@ a.card-button {
 
 
 
-/* Responsive layout - makes an one column layout instead of a three-column layout (in order to prevent horizontal scrolling) */
-@media screen and (max-width: 705px) {
-  .flex-container {
-    flex-flow: column wrap;
-    height:inherit;
-    justify-content: center;
-    align-content: center;
-  }
+/* Responsive layout (Adjust borders) */
+
+@media screen and (max-width: 534px) {
   #sedans {
-      border-top-right-radius: 10px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-radius: 10px 10px 0px 0px;
+  }
+  #suvs {
+      border-radius: 0px;
   }
   #luxury {
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 10px;
+      border-radius: 0px 0px 10px 10px;
+  }
+}
+
+@media screen and (min-width: 535px) and (max-width: 802px) {
+  #sedans {
+      border-radius: 10px 0 0 0px;
+  }
+  #suvs {
+      border-radius: 0px 10px 0px 0px;
+  }
+  #luxury {
+      border-radius: 0px 0px 10px 10px;
   }
 }
