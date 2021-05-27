@@ -153,6 +153,7 @@ a.card-button {
   }
 }
 
+/* All rounded corners of the cards on the separate pages of sedans, suvs and luxury */
 .all-border-radius#sedans, .all-border-radius#suvs, .all-border-radius#luxury {
     border-radius: 10px;
 }
