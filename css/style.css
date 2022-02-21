@@ -1,0 +1,163 @@
+:root {
+  --bright-orange:hsl(31, 77%, 52%);
+  --dark-cyan:hsl(184, 100%, 22%);
+  --very-dark-cyan:hsl(179, 100%, 13%);
+  --transparent-white:hsla(0, 0%, 100%, 0.75);
+  /* paragraphs */
+  --very-light-gray:hsl(0, 0%, 95%);
+}
+
+/* Media Query break points */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  width: 80%;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.2rem;
+  /* Background colours of the cards, link button colours and its media queries */
+}
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin: 2.25rem 0;
+}
+.card__text {
+  flex: 1;
+  color: var(--transparent-white);
+  margin: 0 0 3.2rem 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+.card__link-button {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  width: 15rem;
+  text-decoration: none;
+  padding: 1rem;
+  border: 2px solid var(--very-light-gray);
+  border-radius: 25px;
+  background-color: var(--very-light-gray);
+  margin-top: auto;
+}
+.card__link-button:hover {
+  transition: 0.3s;
+}
+.card#sedans {
+  background-color: var(--bright-orange);
+}
+.card#sedans a {
+  color: var(--bright-orange);
+}
+.card#sedans a:hover {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+}
+@media only screen and (max-width: 594px) {
+  .card#sedans {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+@media only screen and (min-width: 595px) and (max-width: 892px) {
+  .card#sedans {
+    border-radius: 10px 0px 0px 0px;
+  }
+}
+@media only screen and (min-width: 893px) {
+  .card#sedans {
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+.card#suvs {
+  background-color: var(--dark-cyan);
+}
+.card#suvs a {
+  color: var(--dark-cyan);
+}
+.card#suvs a:hover {
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+}
+@media only screen and (max-width: 594px) {
+  .card#suvs {
+    border-radius: 0px;
+  }
+}
+@media only screen and (min-width: 595px) and (max-width: 892px) {
+  .card#suvs {
+    border-radius: 0px 10px 0px 0px;
+  }
+}
+@media only screen and (min-width: 893px) {
+  .card#suvs {
+    border-radius: 0px;
+  }
+}
+.card#luxury {
+  background-color: var(--very-dark-cyan);
+}
+.card#luxury a {
+  color: var(--very-dark-cyan);
+}
+.card#luxury a:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+}
+@media only screen and (max-width: 594px) {
+  .card#luxury {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+@media only screen and (min-width: 595px) and (max-width: 892px) {
+  .card#luxury {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+@media only screen and (min-width: 893px) {
+  .card#luxury {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
+/* All rounded corners of the cards on the separate pages of sedans, suvs and luxury */
+.all-border-radius#sedans, .all-border-radius#suvs, .all-border-radius#luxury {
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

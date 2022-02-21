@@ -1,0 +1,11 @@
+@use "base";
+
+.flex-container {
+  width: 80%;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}

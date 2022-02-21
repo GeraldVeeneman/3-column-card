@@ -1,0 +1,42 @@
+// Colours
+:root {
+  --bright-orange:hsl(31, 77%, 52%);
+  --dark-cyan:hsl(184, 100%, 22%);
+  --very-dark-cyan:hsl(179, 100%, 13%);
+  --transparent-white:hsla(0, 0%, 100%, 0.75);
+
+  /* paragraphs */
+  --very-light-gray:hsl(0, 0%, 95%);
+}
+
+/* Media Query break points */
+
+$bp-1-col-max: 594px; // max one column
+$bp-2-col-min: 595px; // min two columns and one beneath
+$bp-2-col-max: 892px; // max two columns and one beneath
+$bp-3-col-min: 893px; // min three columns
+
+// Global reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {  
+  font-size: 62.5%; // 1rem = 10px (10px/16px = 62.5%)
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font: {
+      family: 'Lexend Deca', sans-serif;
+      size: 1.5rem;
+  }
+}
